@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "[Loader] Library Loader (x86)",
+            "type": "shell",            
+            "command": [
+                "i686-w64-mingw32-gcc",
+                "-m32",
+                "-fshort-wchar",              				
+				"${workspaceFolder}/libloader.c",                					
+                "-static",      
+                "-static-libgcc",                 
+                "-o ${workspaceFolder}/libloader32.exe"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },        
+    ]
+
+}
